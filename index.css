@@ -16,8 +16,11 @@ body{
 
 .nav-link{
     color: rgb(127, 33, 127)!important;
-    text-shadow: 1px 1px rgba(55, 221, 132);
     font-size: 14px !important;
+}
+
+.nav-link:hover{
+    text-shadow: 1px 1px rgb(26, 101, 61);
 }
 
 .card-img-top{

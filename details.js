@@ -50,7 +50,7 @@ async function createTemplate({ name, brand, description, price, imageUrl }) {
     buyBtn.classList.add("btn", "btn-secondary", "px-5", "me-3", "action-btn");
     buyBtn.innerText = ("Buy now");
     let wishBtn = document.createElement("button");
-    wishBtn.classList.add("btn", "btn-secondary", "px-5", "action-btn");
+    wishBtn.classList.add("btn", "btn-secondary", "px-5", "my-2","action-btn");
     wishBtn.innerText = ("Add to wishlist");
 
     resultsArea.appendChild(colImg);
