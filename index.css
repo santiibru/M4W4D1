@@ -30,14 +30,15 @@ body{
 }
 
 .card{
-    width: 200px;
     height: 280px;
-    transition: transform 1s;
+    transition: transform 0.8s;
 }
 
 
 .card:hover{
-   transform: scale(1.2);
+   transform: scale(1.1);
+   overflow: hidden;
+   z-index: 1;
 }
 
 .card-body{

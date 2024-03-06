@@ -12,7 +12,7 @@ window.onload = getPosts()
 async function getPosts() {
     try {
         const res = await fetch("https://striveschool-api.herokuapp.com/api/product/", {
-            headers: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDg0NTQzNjUsImV4cCI6MTcwOTY2Mzk2NX0.TOQ5h4RvmPWCE62QGoprJHSsAyO6giYTAwOnUys_G-c"}
+            headers: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDk3NTQ2MTcsImV4cCI6MTcxMDk2NDIxN30.u6_S0evWKhEMZiQAppDoy1TKhde2vg0vzoSRBfjYgXw"}
         });
         const json = await res.json();
         json.forEach((element) => {

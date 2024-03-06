@@ -31,7 +31,7 @@ async function getTable() {
     addPrice.value = "";
     try {
         const res = await fetch("https://striveschool-api.herokuapp.com/api/product/", {
-            headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDg0NTQzNjUsImV4cCI6MTcwOTY2Mzk2NX0.TOQ5h4RvmPWCE62QGoprJHSsAyO6giYTAwOnUys_G-c" }
+            headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDk3NTQ2MTcsImV4cCI6MTcxMDk2NDIxN30.u6_S0evWKhEMZiQAppDoy1TKhde2vg0vzoSRBfjYgXw" }
         });
         const json = await res.json();
         json.forEach((post) => {
@@ -150,7 +150,7 @@ async function updateProduct(_id) {
     if (addName.value && addBrand.value && addDesc.value && addImage.value && addPrice.value) {
         try {
             let myProduct = { "name": addName.value, "brand": addBrand.value, "description": addDesc.value, "imageUrl": addImage.value, "price": addPrice.value };
-            const res = await fetch("https://striveschool-api.herokuapp.com/api/product/" + _id, { method: "PUT", "body": JSON.stringify(myProduct), headers: { "Content-type": "application/json;charset=UTF-8", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDg0NTQzNjUsImV4cCI6MTcwOTY2Mzk2NX0.TOQ5h4RvmPWCE62QGoprJHSsAyO6giYTAwOnUys_G-c" } });
+            const res = await fetch("https://striveschool-api.herokuapp.com/api/product/" + _id, { method: "PUT", "body": JSON.stringify(myProduct), headers: { "Content-type": "application/json;charset=UTF-8", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDk3NTQ2MTcsImV4cCI6MTcxMDk2NDIxN30.u6_S0evWKhEMZiQAppDoy1TKhde2vg0vzoSRBfjYgXw" } });
             updateDiv.classList.add("d-none")
             addDiv.classList.remove("d-none");
             alertEdit.classList.toggle("d-none");
@@ -173,7 +173,7 @@ async function updateProduct(_id) {
 
 //Funzione per fare il delete
 async function deleteProduct(pid) {
-    const result = await fetch("https://striveschool-api.herokuapp.com/api/product/" +pid, { method: "DELETE", headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDg0NTQzNjUsImV4cCI6MTcwOTY2Mzk2NX0.TOQ5h4RvmPWCE62QGoprJHSsAyO6giYTAwOnUys_G-c" }});
+    const result = await fetch("https://striveschool-api.herokuapp.com/api/product/" +pid, { method: "DELETE", headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQ0ODAyNjljNDM3MDAwMTkzYzM1OGIiLCJpYXQiOjE3MDk3NTQ2MTcsImV4cCI6MTcxMDk2NDIxN30.u6_S0evWKhEMZiQAppDoy1TKhde2vg0vzoSRBfjYgXw" }});
     alertDelete.classList.toggle("d-none");
     setTimeout(() => {
         alertDelete.classList.toggle("d-none");
